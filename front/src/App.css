@@ -1,0 +1,35 @@
+body {
+  background-color: #F2F2F2;
+  font-family: 'Libre Baskerville', serif;
+}
+
+h1, h2 {
+  color: #065AA1;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+p {
+  max-width: 60vw;
+  color: #032947;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  font-size: 13px;
+}
+
+form {
+  display: flex;
+}
