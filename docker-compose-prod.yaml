@@ -1,0 +1,18 @@
+version: '3'
+services:
+  front-prod:
+    container_name: app-prod
+    build:
+      context: ./front
+      dockerfile: Dockerfile-prod
+    ports:
+      - '3000:80'
+    depends_on:
+      - back-prod
+  back-prod:
+    container_name: backend-prod
+    build:
+      context: ./back
+      dockerfile: Dockerfile-prod
+    ports:
+      - '3001:3001'

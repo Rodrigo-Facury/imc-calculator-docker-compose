@@ -1,0 +1,21 @@
+version: '3'
+services:
+  frontend:
+    build: front/
+    restart: on-failure
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - './front:/app'
+      - '/front/app/node_modules'
+    depends_on:
+      - backend
+  backend:
+    build: back/
+    restart: on-failure
+    ports:
+      - 3001:3001
+    environment:
+    - NODE_ENV=development
